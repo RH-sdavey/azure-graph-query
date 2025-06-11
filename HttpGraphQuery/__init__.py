@@ -58,7 +58,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         client_id = os.getenv("CLIENT_ID")
         client_secret = os.getenv("CLIENT_SECRET")
         client_code = os.getenv("CLIENT_CODE")
-        action_url = f"/api/HttpGraphQuery?code={code}&upn={upn}"
+        action_url = f"/api/HttpGraphQuery?code={client_code}&upn={upn}"
 
         # Token
         token_resp = requests.post(
